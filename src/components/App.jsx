@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Landing from './Landing'
-import Home from '../pages/Home';
+import Landing from '../components/Landing';
+import DSA from '../pages/DSA';
+import OperatingSystem from '../pages/OperatingSystem';
+
+import '../styles/Landing.scss';
 
 export default function App() {
   return (
-    // <div className='text-red-600'>
-    //   App
-    
-    // </div>
     <BrowserRouter>
-    {/* <Landing/> */}
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/dsa" element={<DSA />} />
+        <Route path="/os" element={<OperatingSystem />} />
+        
       </Routes>
     </BrowserRouter>
-    
   )
 }
