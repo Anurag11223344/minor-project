@@ -1,78 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
-*{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-a{
-    font-family: 'Montserrat', sans-serif;
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
 }
 
-h1{
-    font-size: 50px;
-    line-height: 64px;
-    color: #222;
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-h2{
-    font-size: 46px;
-    line-height: 54px;
-    color: #222;
+.algorithm-selector {
+    margin-bottom: 20px;
 }
 
-h4{
-    font-size: 20px;
-    color: #222;
+.algorithm-selector h2 {
+    margin-bottom: 10px;
+    color: #333;
 }
 
-h6{
-    font-weight: 700;
-    font-size: 12px;
-    color: #222;
+input[type=radio] {
+    margin-right: 8px;
 }
 
-p{
-    font-size: 16px;
-    color: #465b52;
-    margin: 15px 0 20px 0;
+.input-table {
+    margin-bottom: 20px;
 }
 
-.section-p1{
-    padding: 40px 80px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
 }
 
-.section-m1 {
-    margin: 18px 50px;
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
 }
 
-button.normal{
-    font-size: 14px;
-    font-weight: 600;
-    padding: 15px 30px;
-    color: black;
-    /* color: #007BFF; */
-    background-color: white;
+input[type="text"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.control-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s;
+    margin: 5px 0;
 }
 
-button.white{
-    font-size: 13px;
-    font-weight: 600;
-    padding: 11px 18px;
-    color: #fff;
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px solid #fff;
-    outline: none;
-    transition: 0.2s;
+.control-button:hover {
+    background-color: #0056b3;
 }
 
-body{
-    width: 100%;
+#quantumParagraph {
+    margin-bottom: 20px;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+results fresh {
+    margin-top: 10px;
+}
+
+fresh th {
+    background: linear-gradient(WhiteSmoke, lightgray);
+    text-align: left;
+    border: 1px solid black;
+}
+
+fresh td {
+    border: 1px solid black;
+    border-bottom: 0;
+    height: 20px;
+    text-align: left;
+}
+
+#timer {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#curtain {
+    background-color: white;
+    position: absolute;
 }
