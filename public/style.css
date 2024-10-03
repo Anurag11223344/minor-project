@@ -1,108 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* @import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+*{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
+.section-p1{
+    padding: 40px 80px;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+.section-m1 {
+    margin: 18px 50px;
 }
 
-.algorithm-selector {
-    margin-bottom: 20px;
-}
-
-.algorithm-selector h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-input[type=radio] {
-    margin-right: 8px;
-}
-
-.input-table {
-    margin-bottom: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 10px;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-input[type="text"] {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-}
-
-.control-button {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    // color: #007BFF;
+    background-color: black;
     border-radius: 4px;
     cursor: pointer;
-    margin: 5px 0;
+    border: none;
+    outline: none;
+    transition: 0.2s;
 }
 
-.control-button:hover {
-    background-color: #0056b3;
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
 }
-
-#quantumParagraph {
-    margin-bottom: 20px;
-}
-
-.results {
-    margin-top: 20px;
-}
-
-results fresh {
+button{
     margin-top: 10px;
 }
 
-fresh th {
-    background: linear-gradient(WhiteSmoke, lightgray);
-    text-align: left;
-    border: 1px solid black;
-}
+ */
 
-fresh td {
-    border: 1px solid black;
-    border-bottom: 0;
-    height: 20px;
-    text-align: left;
-}
 
-#timer {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-#curtain {
-    background-color: white;
-    position: absolute;
-}
