@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+#selection-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../resources/trianglify-lowres.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Optional padding to avoid button overflow */
+}
+
+#button-container {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 10vh; /* Space between buttons set to 10vh */
+    width: 100%;
+    max-width: 1200px; /* Maximum width for button container */
+}
+
+.algorithm-button {
+    text-align: left;
+    padding: 20px 30px; /* Add padding for the buttons */
+    margin: 0; /* Remove margin to avoid overflow */
+    font-size: 1.1rem;
+    color: #EEFF00; /* Button text color */
+    background-color: rgba(204, 153, 255, 1); /* Light purple background */
+    border: none;
+    border-radius: 59px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+    width: 100%; /* Ensure buttons take full width of their grid cell */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+p {
+    text-align: left;
+    color: #ffffff; /* Paragraph text color */
+}
+
+.algorithm-button:hover {
+    background-color: rgba(153, 51, 255, 1); /* Dark purple on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#selection-page > h1 {
+
+    color: #ffffff;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    text-align:left;
+}
