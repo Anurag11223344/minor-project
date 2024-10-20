@@ -10,13 +10,16 @@
 body {
   background-color: #f4f4f4;
   color: #333;
+  background-image: url(../resources/trianglify-lowres.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
-  background-color: #fff;
+  background-color: #ffffffb9;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
