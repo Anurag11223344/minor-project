@@ -1,31 +1,59 @@
-// $ -> document.getElementByClassName('.priority');
+// // $ -> document.getElementByClassName('.priority');
 
-recalculateServiceTime();
-$('.priority-only').hide();
+// recalculateServiceTime();
+// $('.priority-only').hide();
 
+// $(document).ready(function () {
+//   $('input[type=radio][name=algorithm]').change(function () {
+//     if (this.value == 'priority') {
+//       $('.priority-only').show();
+//       $('.servtime').show();
+//       $('#minus').css('left', '604px');
+//     }
+//     else {
+//       $('.priority-only').hide();
+//       $('.servtime').show();
+//       $('#minus').css('left', '428px');
+//     }
+
+//     if (this.value == 'robin') {
+//       $('.servtime').hide();
+//       $('#quantumParagraph').show();
+//     }
+//     else {
+//       $('#quantumParagraph').hide();
+//       $('.servtime').show();
+//     }
+
+//     recalculateServiceTime();
+//   });
+// });
 $(document).ready(function () {
+  // Hide priority section on initial load
+  $('.priority-only').hide(); // Hides the priority fields initially
+  
+  recalculateServiceTime();
+
   $('input[type=radio][name=algorithm]').change(function () {
-    if (this.value == 'priority') {
-      $('.priority-only').show();
-      $('.servtime').show();
-      $('#minus').css('left', '604px');
-    }
-    else {
-      $('.priority-only').hide();
-      $('.servtime').show();
-      $('#minus').css('left', '428px');
-    }
+      if (this.value == 'priority') {
+          $('.priority-only').show();
+          $('.servtime').show();
+          $('#minus').css('left', '604px');
+      } else {
+          $('.priority-only').hide();
+          $('.servtime').show();
+          $('#minus').css('left', '428px');
+      }
 
-    if (this.value == 'robin') {
-      $('.servtime').hide();
-      $('#quantumParagraph').show();
-    }
-    else {
-      $('#quantumParagraph').hide();
-      $('.servtime').show();
-    }
+      if (this.value == 'robin') {
+          $('.servtime').hide();
+          $('#quantumParagraph').show();
+      } else {
+          $('#quantumParagraph').hide();
+          $('.servtime').show();
+      }
 
-    recalculateServiceTime();
+      recalculateServiceTime();
   });
 });
 
@@ -38,7 +66,7 @@ function addRow() {
   + '</td><td>'
   + (lastRowNumebr + 1)
   + '</td><td><input class="exectime" type="text"/></td><td class="servtime"></td>'
-  // if ($('input[name=algorithm]:checked', '#algorithm').val() == "priority")
+  //if ($('input[name=algorithm]:checked', '#algorithm').val() == "priority")
   + '<td class="priority-only"><input type="text"/></td></tr>';
 
   lastRow.after(newRow);
@@ -47,7 +75,7 @@ function addRow() {
   minus.show();
   minus.css('top', (parseFloat(minus.css('top')) + 24) + 'px');
 
-  if ($('input[name=algorithm]:checked', '#algorithm').val() !== "priority")
+  if ($('input[name=algorithm]:checked', '#algorithm').val() != "priority")
     $('.priority-only').hide();
 
 
@@ -233,7 +261,7 @@ function findNextIndex(currentIndex, array) {
 }
 
 function animate() {
-	$('#fresh').prepend('<div id="curtain" style="position: absolute; right: 0; width:100%; height:100px;"></div>');
+	$('#fresh').prepend('<div id="curtain" style="position: absolute; right: 0; width:100%; height:100px;background:rgb(243, 199, 240)"></div>');
   
   $('#curtain').width($('#resultTable').width());
   $('#curtain').css({left: $('#resultTable').position().left});
@@ -273,7 +301,7 @@ function draw() {
     $.each(inputTable, function (key, value) {
       if (key == 0) return true;
       var executeTime = parseInt($(value.children[2]).children().first().val());
-      th += '<th style="height: 70px; width: ' + executeTime * 20 + 'px;">P' + (key - 1) + '</th>';
+      th += '<th style="height: 60px; width: ' + executeTime * 20 + 'px;">P' + (key - 1) + '</th>';
       td += '<td>' + executeTime + '</td>';
     });
 
@@ -300,7 +328,7 @@ function draw() {
     });
 
     $.each(executeTimes, function (key, value) {
-      th += '<th style="height: 70px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
+      th += '<th style="height: 60px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
       td += '<td>' + value.executeTime + '</td>';
     });
 
@@ -328,7 +356,7 @@ function draw() {
     });
 
     $.each(executeTimes, function (key, value) {
-      th += '<th style="height: 70px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
+      th += '<th style="height: 60px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
       td += '<td>' + value.executeTime + '</td>';
     });
 
@@ -354,7 +382,7 @@ function draw() {
       areWeThereYet = true;
       $.each(executeTimes, function (key, value) {
         if (value.executeTime > 0) {
-          th += '<th style="height: 70px; width: ' + (value.executeTime > quantum ? quantum : value.executeTime) * 20 + 'px;">P' + value.P + '</th>';
+          th += '<th style="height: 60px; width: ' + (value.executeTime > quantum ? quantum : value.executeTime) * 20 + 'px;">P' + value.P + '</th>';
           td += '<td>' + (value.executeTime > quantum ? quantum : value.executeTime) + '</td>';
           value.executeTime -= quantum;
           areWeThereYet = false;
