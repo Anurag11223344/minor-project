@@ -38,7 +38,7 @@ function addRow() {
   + '</td><td>'
   + (lastRowNumebr + 1)
   + '</td><td><input class="exectime" type="text"/></td><td class="servtime"></td>'
-  //if ($('input[name=algorithm]:checked', '#algorithm').val() == "priority")
+  // if ($('input[name=algorithm]:checked', '#algorithm').val() == "priority")
   + '<td class="priority-only"><input type="text"/></td></tr>';
 
   lastRow.after(newRow);
@@ -47,7 +47,7 @@ function addRow() {
   minus.show();
   minus.css('top', (parseFloat(minus.css('top')) + 24) + 'px');
 
-  if ($('input[name=algorithm]:checked', '#algorithm').val() != "priority")
+  if ($('input[name=algorithm]:checked', '#algorithm').val() !== "priority")
     $('.priority-only').hide();
 
 
