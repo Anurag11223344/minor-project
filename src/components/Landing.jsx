@@ -70,7 +70,7 @@ export default function Landing() {
       </div>
 
       <div className="results">
-        <fresh></fresh>
+        <div id='fresh'></div>
         <p>Timer: <strong id="timer"></strong> sec</p>
       </div>
     </div>
