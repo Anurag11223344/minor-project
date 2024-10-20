@@ -36,7 +36,7 @@ export default function Landing() {
               <tr>
                   <td>P1</td>
                   <td>1</td>
-                  <td><input className="initial exectime" value="3" /></td>
+                  <td><input className="initial exectime" type="text" value="3" /></td>
                   <td className="servtime"></td>
                   <td className="priority-only"><input type="text"/></td>
               </tr>

@@ -58,7 +58,7 @@ h1 {
 
   table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
     text-align: center;
 
     th,
@@ -85,6 +85,11 @@ h1 {
     }
   }
 }
+// input[type="text"] {
+//   width: 60px;
+//   padding: 5px;
+//   text-align: center;
+// }
 
 .control-button {
   display: inline-block;
@@ -144,6 +149,44 @@ h1 {
     }
   }
 }
+
+.results #fresh {
+  margin-top: 10px;
+}
+
+#fresh th {
+  background: linear-gradient(#007bff, #ffffff); /* White */
+  text-align: left;
+  border: 1px solid black;
+}
+
+#fresh td {
+  border: 1px solid black;
+  // border-bottom: 0;
+  height: 40px;
+  text-align: left;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#curtain {
+  background-color: white;
+  position: absolute;
+}
+#resultTable {
+  width: 70%;
+  border-collapse: collapse; /* Collapse borders */
+}
+
+#resultTable th,
+#resultTable td {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
 
 /* Styling for priority fields when Priority Scheduling is selected */
 .priority-only.active {

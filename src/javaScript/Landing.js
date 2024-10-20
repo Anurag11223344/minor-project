@@ -273,7 +273,7 @@ function draw() {
     $.each(inputTable, function (key, value) {
       if (key == 0) return true;
       var executeTime = parseInt($(value.children[2]).children().first().val());
-      th += '<th style="height: 60px; width: ' + executeTime * 20 + 'px;">P' + (key - 1) + '</th>';
+      th += '<th style="height: 70px; width: ' + executeTime * 20 + 'px;">P' + (key - 1) + '</th>';
       td += '<td>' + executeTime + '</td>';
     });
 
@@ -300,7 +300,7 @@ function draw() {
     });
 
     $.each(executeTimes, function (key, value) {
-      th += '<th style="height: 60px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
+      th += '<th style="height: 70px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
       td += '<td>' + value.executeTime + '</td>';
     });
 
@@ -328,7 +328,7 @@ function draw() {
     });
 
     $.each(executeTimes, function (key, value) {
-      th += '<th style="height: 60px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
+      th += '<th style="height: 70px; width: ' + value.executeTime * 20 + 'px;">P' + value.P + '</th>';
       td += '<td>' + value.executeTime + '</td>';
     });
 
@@ -354,7 +354,7 @@ function draw() {
       areWeThereYet = true;
       $.each(executeTimes, function (key, value) {
         if (value.executeTime > 0) {
-          th += '<th style="height: 60px; width: ' + (value.executeTime > quantum ? quantum : value.executeTime) * 20 + 'px;">P' + value.P + '</th>';
+          th += '<th style="height: 70px; width: ' + (value.executeTime > quantum ? quantum : value.executeTime) * 20 + 'px;">P' + value.P + '</th>';
           td += '<td>' + (value.executeTime > quantum ? quantum : value.executeTime) + '</td>';
           value.executeTime -= quantum;
           areWeThereYet = false;
